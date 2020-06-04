@@ -12,7 +12,7 @@ spec:
     - name: pathToDockerFile
       value: Dockerfile
     - name: pathToContext
-      value: $(resources.inputs.docker-source.path) #configure: may change according to your source
+      value: $(resources.inputs.docker-source.path)/simpleapp #configure: may change according to your source
   resources:
     inputs:
       - name: docker-source

@@ -10,4 +10,4 @@ spec:
     - name: revision
       value: master
     - name: url
-      value: https://github.com/hackton/simpleapp/
+      value: https://github.com/mbanzai/hackaton

@@ -9,7 +9,7 @@ spec:
   resources:
     - name: source-repo
       resourceRef:
-        name: myapp-git
+        name: simpleapp-git
     - name: myapp-image
       resourceRef:
         name: simpleapp-image
