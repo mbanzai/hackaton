@@ -37,6 +37,6 @@ spec:
               - build-myapp
       params:
         - name: path
-          value: /workspace/docker-source/DeployMyappToKube.yaml #configure: may change according to your source
+          value: /workspace/docker-source/simpleapp/DeployMyappToKube.yaml #configure: may change according to your source
         - name: yamlPathToImage
           value: "spec.template.spec.containers[0].image"
