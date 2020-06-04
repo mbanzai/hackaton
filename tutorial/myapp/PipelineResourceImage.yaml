@@ -1,0 +1,10 @@
+# The image resource represents the image to be built by the Task
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: simpleapp-image
+spec:
+  type: image
+  params:
+    - name: url
+      value: phx.ocir.io/axe8cdkpdr85/tekton-example/

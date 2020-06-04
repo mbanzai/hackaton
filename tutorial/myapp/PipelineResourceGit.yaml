@@ -1,0 +1,13 @@
+# PipelineResources are used to define the artifacts that can be passed in and out of a Task
+# The git resource represents a git repository with a specific revision.
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: simpleapp-git
+spec:
+  type: git
+  params:
+    - name: revision
+      value: master
+    - name: url
+      value: https://github.com/hackton/simpleapp/

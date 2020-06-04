@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  name: pipeline-run-myapp
+spec:
+  serviceAccountName: myapp-service
+  pipelineRef:
+    name: myapp-pipeline
+  resources:
+    - name: source-repo
+      resourceRef:
+        name: myapp-git
+    - name: myapp-image
+      resourceRef:
+        name: simpleapp-image
+

@@ -1,0 +1,42 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: myapp-pipeline
+spec:
+  resources:
+    - name: source-repo
+      type: git
+    - name: myapp-image
+      type: image
+  tasks:
+    - name: build-myapp
+      taskRef:
+        name: build-docker-image-from-git-source
+      params:
+        - name: pathToDockerFile
+          value: Dockerfile
+        - name: pathToContext
+          value: simpleapp #configure: may change according to your source
+      resources:
+        inputs:
+          - name: docker-source
+            resource: source-repo
+        outputs:
+          - name: builtImage
+            resource: myapp-image
+    - name: deploy-myapp
+      taskRef:
+        name: deploy-using-kubectl
+      resources:
+        inputs:
+          - name: source
+            resource: source-repo
+          - name: image
+            resource: myapp-image
+            from:
+              - build-myapp
+      params:
+        - name: path
+          value: DeployMyappToKube.yaml #configure: may change according to your source
+        - name: yamlPathToImage
+          value: "spec.template.spec.containers[0].image"
