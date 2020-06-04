@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: phx.ocir.io/axe8cdkpdr85/tekton-example:latest
+          image: phx.ocir.io/axe8cdkpdr85/tekton-example
           ports:
             - containerPort: 5000
 
-        
