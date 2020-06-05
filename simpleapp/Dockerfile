@@ -10,7 +10,7 @@ RUN pip3 install --no-cache-dir -r /usr/src/app/requirements.txt
 
 # Copy files required for the app to run
 COPY app.py /usr/src/app/
-COPY index.html /usr/src/app/templates/
+COPY templates/index.html /usr/src/app/templates/
 
 # Tell the port number the container should expose
 EXPOSE 5000
