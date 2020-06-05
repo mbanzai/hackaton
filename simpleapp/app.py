@@ -18,6 +18,12 @@ images = [
     "http://www.catshaming.co.uk/wp-content/uploads/2014/11/anigif_enhanced-buzz-26388-1381844103-11.gif",
     "http://www.catshaming.co.uk/wp-content/uploads/2014/11/anigif_enhanced-buzz-27162-1381845360-0.gif",
     "http://www.dogshaming.co.uk/wp-content/uploads/2014/11/10976_10152751004061385_6101333622735638035_n.jpg"
+    "https://tenor.com/view/funny-dog-gif-7753357"
+    "https://media.tenor.com/images/a10e992704a5d395217800f925391da9/tenor.gif"
+    "https://tenor.com/view/turtle-animals-animated-save-the-turtle-dog-gif-15349938"
+    "https://post.barkbox.com/?attachment_id=1561"
+    "https://s3.amazonaws.com/barkpost-assets/50+GIFs/3.gif"
+    "https://s3.amazonaws.com/barkpost-assets/50+GIFs/1.gif"
 ]
 
 @app.route('/')
