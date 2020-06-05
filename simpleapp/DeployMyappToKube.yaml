@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: myapp
+          imagePullPolicy: Always
           image: phx.ocir.io/axe8cdkpdr85/tekton-example/myapp:latest
           ports:
             - containerPort: 5000
