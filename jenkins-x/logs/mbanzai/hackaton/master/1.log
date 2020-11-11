@@ -1,0 +1,15 @@
+
+Showing logs for build [32mmeta-mbanzai-hackaton-master-5vnkv-1[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1605092506.9863868,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-mbanzai-hackaton-master-5vnkv-1[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-mbanzai-hackaton-master-5vnkv-1[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-mbanzai-hackaton-master-5vnkv-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-mbanzai-hackaton-master-5vnkv-d8kdg[0m
+{"level":"info","ts":1605092515.8652961,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/hackaton.git @ b45c3211451bac3d3531f2cd0c01732306d64dc3 in path /workspace/source"}
+{"level":"warn","ts":1605092515.8653936,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"error","ts":1605092515.8924065,"caller":"git/git.go:41","msg":"Error running git [submodule init]: exit status 128\nfatal: No url found for submodule path 'oke/go-qs1' in .gitmodules\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:41\ngithub.com/tektoncd/pipeline/pkg/git.SubmoduleFetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:127\nmain.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:57\nruntime.main\n\truntime/proc.go:203"}
+{"level":"fatal","ts":1605092515.8927515,"caller":"git-init/main.go:58","msg":"Error initializing or fetching the git submodules","stacktrace":"main.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:58\nruntime.main\n\truntime/proc.go:203"}
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-git-source-meta-mbanzai-hackaton-master-5vnkv-d8kdg'. The execution of the pipeline has stopped.[0m
