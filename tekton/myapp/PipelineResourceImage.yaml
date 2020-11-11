@@ -1,3 +1,4 @@
+# PipelineResources are used to define the artifacts that can be passed in and out of a Task.
 # The image resource represents the image to be built by the Task
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource

@@ -8,6 +8,12 @@ resource "oci_containerengine_cluster" "k8s_cluster" {
  
   #Optional
   options {
+    add_ons {
+
+        #Optional
+        is_kubernetes_dashboard_enabled = "true"
+        is_tiller_enabled = "true"
+    }
     service_lb_subnet_ids = [oci_core_subnet.LoadBalancerSubnetAD1.id, oci_core_subnet.LoadBalancerSubnetAD2.id]
   }
 }

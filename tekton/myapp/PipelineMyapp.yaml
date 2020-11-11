@@ -1,3 +1,9 @@
+# A Pipeline defines a list of Tasks to execute in order, while
+# also indicating if any outputs should be used as inputs of a following Task by
+# using the from field and also indicating
+# the order of executing (using the runAfter and from fields).
+# The same variable substitution you used in Tasks is also available in a Pipeline.
+
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
@@ -16,7 +22,7 @@ spec:
         - name: pathToDockerFile
           value: Dockerfile
         - name: pathToContext
-          value: /workspace/docker-source/simpleapp #configure: may change according to your source
+          value: /workspace/docker-source/simpleapp 
       resources:
         inputs:
           - name: docker-source
@@ -37,6 +43,6 @@ spec:
               - build-myapp
       params:
         - name: path
-          value: /workspace/source/simpleapp/DeployMyappToKube.yaml #configure: may change according to your source
+          value: /workspace/source/simpleapp/DeployMyappToKube.yaml 
         - name: yamlPathToImage
           value: "spec.template.spec.containers[0].image"
