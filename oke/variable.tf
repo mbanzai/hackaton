@@ -32,7 +32,7 @@ variable "oke" {
  
   default = {
     name             = "oke"
-    version          = "v1.16.8"
+    version          = "v1.18.10"
     shape            = "VM.Standard2.1"
     nodes_per_subnet = 1
   }
